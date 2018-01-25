@@ -1,6 +1,6 @@
 {
   "name": "npdc-pbhims",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Polar Bear/Human Information Management System",
   "main": "gulpfile.js",
   "scripts": {
