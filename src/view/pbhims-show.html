@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<npdc:edit-button class="np-primary-control"></npdc:edit-button>
+<npdc:loader ng-if="!document"></npdc:loader>
+
+<div ng-if="document">
+    {{ document | json }}
+    <!--<leaflet ng-if="mapOptions.coverage" options="mapOptions" class="coverage-map"></leaflet>-->
+</div>
+
