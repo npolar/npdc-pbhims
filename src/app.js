@@ -22,8 +22,12 @@ resources.forEach(service => npdcPbhimsApp.factory(service.resource, [ "NpolarAp
 npdcPbhimsApp.config(require("./router"));
 
 npdcPbhimsApp.config(($httpProvider, npolarApiConfig) => {
-  var autoConfig = new npdcCommon.AutoConfig("test"); // test | production
+  var autoConfig = new npdcCommon.AutoConfig("production"); // test | production
   angular.extend(npolarApiConfig, autoConfig, { resources });
   $httpProvider.interceptors.push("npolarApiInterceptor");
+});
+
+npdcPbhimsApp.run((NpolarTranslate, npdcAppConfig) => {
+  NpolarTranslate.loadBundles("npdc-pbhims");
 });
 
