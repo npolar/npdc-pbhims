@@ -11,7 +11,6 @@ function PbhimsSearchController($controller, $scope, $routeParams, npdcAppConfig
     sort: "-incident.datetime",
     fields: "id,title,status,incident.datetime,location.country,location.region,location.name,incident.category",
     facets: "status,incident.category,location.country,location.region,location.name",
-    "date-year": "incident.datetime"
   };
 
   npdcAppConfig.search.local.results.detail = function(entry) {
@@ -21,6 +20,12 @@ function PbhimsSearchController($controller, $scope, $routeParams, npdcAppConfig
 
   npdcAppConfig.search.local.results.subtitle = entry => entry.status;
   npdcAppConfig.search.local.results.href = entry => entry.id;
+
+  npdcAppConfig.search.local.filterUi = {
+    "year-incident.datetime": {
+      type: "range"
+    }
+  };
 
   $scope.$on("$locationChangeSuccess", () => {
     $scope.search(query);
