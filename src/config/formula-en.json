@@ -1,0 +1,124 @@
+{
+    "fieldsets": [
+        "Entry data",
+        "Incident information",
+        "Location information",
+        "Humans involved",
+        "Polar bears involved"
+    ],
+    "fields": {
+        "title": {
+            "title": "Title"
+        },
+        "status": {
+            "title": "Status",
+            "values": [
+                "Complete",
+                "Incomplete"
+            ]
+        },
+        "created_by": {
+            "title": "Entry created by"
+        },
+        "updated_by": {
+            "title": "Entry updated by"
+        },
+        "updated": {
+            "title": "Entry updated at",
+            "description": "Date and time of last modification, given in UTC"
+        },
+        "incident": {
+            "title": " ",
+            "fields": {
+                "category": {
+                    "title": "Incident category",
+                    "values": [
+                        "Conflict",
+                        "Avoided conflict"
+                    ]
+                },
+                "datetime": {
+                    "title": "Incident time",
+                    "description": "Date and time of incident, given in UTC"
+                },
+                "datetime_accuracy": {
+                    "title": "Time accuracy",
+                    "description": "Accuracy of given time of incident",
+                    "values": [
+                        "Accurate to the minute",
+                        "Accurate to the hour",
+                        "Accurate to the day",
+                        "Accurate to the month",
+                        "Accurate to the year"
+                    ]
+                },
+                "duration": {
+                    "title": "Incident duration",
+                    "description": "Approximate duration of the incident, given in number of minutes"
+                },
+                "narrative": {
+                    "title": "Incident narrative"
+                }
+
+            }
+        },
+        "location": {
+            "title": " ",
+            "fields": {
+                "country": {
+                    "title": "Country"
+                },
+                "region": {
+                    "title": "Region"
+                },
+                "name": {
+                    "title": "Placename"
+                },
+                "latitude": {
+                    "title": "Latitude",
+                    "description": "Latitude, given in decimal degrees, WGS-84"
+                },
+                "longitude": {
+                    "title": "Longitude",
+                    "description": "Longitude given in decimal degrees, WGS-84"
+                },
+                "accuracy": {
+                    "title": "Coordinate accuracy",
+                    "description": "Approximate accuracy of given coordinates, given in meters"
+                },
+                "use_frequency": {
+                    "title": "Frequency of use",
+                    "description": "Usage frequency of the incident location by humans",
+                    "values": [
+                        "Unknown",
+                        "Daily",
+                        "Weekly",
+                        "Monthly",
+                        "Less frequent"
+                    ]
+                },
+                "security": {
+                    "title": "Security measures",
+                    "description": "Description of security measures on the incident location"
+                },
+                "visibility": {
+                    "title": "Visibility",
+                    "description": "Approximate visibility on location during the incident, given in meters"
+                },
+                "food_sources": {
+                    "title": "Available food sources"
+                },
+                "description": {
+                    "title": "Description"
+                }
+            }
+        },
+        "humans": {
+            "title": "List of humans involved"
+        },
+        "bears": {
+            "title": "List of polar bears involved"
+        }
+    }
+}
+

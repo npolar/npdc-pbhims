@@ -13,6 +13,12 @@ function PbhimsEditController($scope, $controller, NpolarLang, npdcAppConfig, fo
     templates: npdcAppConfig.formula.templates.concat([{
       match: "location.name",
       template: "<npdc:formula-placename></npdc:formula-placename>"
+    }]),
+    languages: npdcAppConfig.formula.languages.concat([{
+      map: require("../config/formula-en.json"),
+      code: "en",
+      // Hijack no/nn/nb for now...
+      aliases: [ "no", "nn", "nb" ]
     }])
   });
 
