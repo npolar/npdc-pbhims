@@ -2,10 +2,17 @@
 <npdc:edit-button class="np-primary-control"></npdc:edit-button>
 <npdc:loader ng-if="!document"></npdc:loader>
 
-<section ng-if="document" class="np-padding np-doc" layout>
-    <header>
-        <h1 class="md-display-2">{{ document.title }}</h1>
-        <pre>{{ document | json }}</pre>
-    </header>
-</section>
+<div ng-if="document">
+    <leaflet options="mapOptions" style="height: 300px"></leaflet>
+
+    <div class="np-doc np-padding" layout>
+        <header>
+            <h1 class="md-display-2">{{ document.title }}</h1>
+            <pre>{{ document | json }}</pre>
+        </header>
+
+        <article class="np-padding" layout>
+        </article>
+    </div>
+</div>
 
